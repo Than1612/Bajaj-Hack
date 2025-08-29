@@ -235,11 +235,3 @@ All responses include:
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-
-## License
-
-This project is created for educational purposes as part of the VIT Full Stack Question.
-
-## Support
-
-For any issues or questions, please refer to the VIT question paper or create an issue in the repository.
