@@ -1,0 +1,178 @@
+{
+  "test_scenarios": {
+    "basic_examples": {
+      "description": "Basic examples from VIT question paper",
+      "tests": [
+        {
+          "name": "Example A",
+          "data": ["a", "1", "334", "4", "R", "$"],
+          "expected": {
+            "even_numbers": ["334", "4"],
+            "odd_numbers": ["1"],
+            "alphabets": ["A", "R"],
+            "special_characters": ["$"],
+            "sum": "339",
+            "concat_string": "Ra"
+          }
+        },
+        {
+          "name": "Example B",
+          "data": ["2", "a", "y", "4", "&", "-", "*", "5", "92", "b"],
+          "expected": {
+            "even_numbers": ["2", "4", "92"],
+            "odd_numbers": ["5"],
+            "alphabets": ["A", "Y", "B"],
+            "special_characters": ["&", "-", "*"],
+            "sum": "103",
+            "concat_string": "ByA"
+          }
+        },
+        {
+          "name": "Example C",
+          "data": ["A", "ABcD", "DOE"],
+          "expected": {
+            "even_numbers": [],
+            "odd_numbers": [],
+            "alphabets": ["A", "ABCD", "DOE"],
+            "special_characters": [],
+            "sum": "0",
+            "concat_string": "EoDdCbAa"
+          }
+        }
+      ]
+    },
+    "edge_cases": {
+      "description": "Edge cases and boundary conditions",
+      "tests": [
+        {
+          "name": "Empty Array",
+          "data": [],
+          "expected": {
+            "even_numbers": [],
+            "odd_numbers": [],
+            "alphabets": [],
+            "special_characters": [],
+            "sum": "0",
+            "concat_string": ""
+          }
+        },
+        {
+          "name": "Single Item",
+          "data": ["a"],
+          "expected": {
+            "even_numbers": [],
+            "odd_numbers": [],
+            "alphabets": ["A"],
+            "special_characters": [],
+            "sum": "0",
+            "concat_string": "A"
+          }
+        },
+        {
+          "name": "Large Numbers",
+          "data": ["999999", "1000000", "123456789"],
+          "expected": {
+            "even_numbers": ["1000000"],
+            "odd_numbers": ["999999", "123456789"],
+            "alphabets": [],
+            "special_characters": [],
+            "sum": "124456788",
+            "concat_string": ""
+          }
+        }
+      ]
+    },
+    "data_patterns": {
+      "description": "Different data patterns and combinations",
+      "tests": [
+        {
+          "name": "Only Numbers",
+          "data": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+          "expected": {
+            "even_numbers": ["2", "4", "6", "8", "10"],
+            "odd_numbers": ["1", "3", "5", "7", "9"],
+            "alphabets": [],
+            "special_characters": [],
+            "sum": "55",
+            "concat_string": ""
+          }
+        },
+        {
+          "name": "Only Alphabets",
+          "data": ["a", "B", "c", "D", "e", "F"],
+          "expected": {
+            "even_numbers": [],
+            "odd_numbers": [],
+            "alphabets": ["A", "B", "C", "D", "E", "F"],
+            "special_characters": [],
+            "sum": "0",
+            "concat_string": "FeDcBa"
+          }
+        },
+        {
+          "name": "Only Special Characters",
+          "data": ["@", "#", "$", "%", "&", "*"],
+          "expected": {
+            "even_numbers": [],
+            "odd_numbers": [],
+            "alphabets": [],
+            "special_characters": ["@", "#", "$", "%", "&", "*"],
+            "sum": "0",
+            "concat_string": ""
+          }
+        }
+      ]
+    },
+    "mixed_scenarios": {
+      "description": "Mixed data type scenarios",
+      "tests": [
+        {
+          "name": "Balanced Mix",
+          "data": ["1", "a", "@", "2", "B", "#", "3", "c", "$"],
+          "expected": {
+            "even_numbers": ["2"],
+            "odd_numbers": ["1", "3"],
+            "alphabets": ["A", "B", "C"],
+            "special_characters": ["@", "#", "$"],
+            "sum": "6",
+            "concat_string": "$cBa"
+          }
+        },
+        {
+          "name": "Negative Numbers",
+          "data": ["-1", "2", "a", "B", "&", "-5", "10"],
+          "expected": {
+            "even_numbers": ["2", "10"],
+            "odd_numbers": ["-1", "-5"],
+            "alphabets": ["A", "B"],
+            "special_characters": ["&"],
+            "sum": "6",
+            "concat_string": "Ba"
+          }
+        }
+      ]
+    }
+  },
+  "generation_rules": {
+    "random_data": {
+      "types": ["number", "alphabet", "special"],
+      "sizes": [5, 10, 15, 20, 25, 30],
+      "number_range": [-1000, 1000],
+      "string_lengths": [1, 10],
+      "special_chars": ["@", "#", "$", "%", "&", "*", "-", "+", "=", "!", "?", "^", "~", "(", ")", "[", "]", "{", "}"]
+    },
+    "pattern_data": {
+      "fibonacci": {"max_count": 20},
+      "prime": {"max_count": 25},
+      "vowels": {"max_count": 30},
+      "binary": {"max_count": 40},
+      "alternating": {"max_count": 35}
+    }
+  },
+  "validation_rules": {
+    "response_timeout": 5.0,
+    "max_data_size": 100,
+    "expected_status_codes": [200, 400, 500],
+    "required_fields": ["is_success", "user_id", "email", "roll_number", "odd_numbers", "even_numbers", "alphabets", "special_characters", "sum", "concat_string"]
+  }
+}

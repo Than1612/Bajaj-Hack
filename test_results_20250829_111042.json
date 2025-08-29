@@ -1,0 +1,211 @@
+{
+  "timestamp": "20250829_111042",
+  "summary": {
+    "total_tests": 11,
+    "total_passed": 9,
+    "total_failed": 2,
+    "success_rate": 81.81818181818183,
+    "avg_response_time": 0.0015454545454545458
+  },
+  "detailed_results": {
+    "basic_examples": [
+      {
+        "test_name": "Example A",
+        "data_length": 6,
+        "status_code": 200,
+        "response_time": 0.002,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 2,
+          "odd_count": 1,
+          "alphabet_count": 2,
+          "special_count": 1,
+          "sum": "339",
+          "concat_length": 2
+        }
+      },
+      {
+        "test_name": "Example B",
+        "data_length": 10,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 3,
+          "odd_count": 1,
+          "alphabet_count": 3,
+          "special_count": 3,
+          "sum": "103",
+          "concat_length": 3
+        }
+      },
+      {
+        "test_name": "Example C",
+        "data_length": 3,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 0,
+          "odd_count": 0,
+          "alphabet_count": 3,
+          "special_count": 0,
+          "sum": "0",
+          "concat_length": 8
+        }
+      }
+    ],
+    "edge_cases": [
+      {
+        "test_name": "Empty Array",
+        "data_length": 0,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 0,
+          "odd_count": 0,
+          "alphabet_count": 0,
+          "special_count": 0,
+          "sum": "0",
+          "concat_length": 0
+        }
+      },
+      {
+        "test_name": "Single Item",
+        "data_length": 1,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 0,
+          "odd_count": 0,
+          "alphabet_count": 1,
+          "special_count": 0,
+          "sum": "0",
+          "concat_length": 1
+        }
+      },
+      {
+        "test_name": "Large Numbers",
+        "data_length": 3,
+        "status_code": 200,
+        "response_time": 0.002,
+        "passed": false,
+        "errors": [
+          "Field 'sum': expected 124456788, got 125456788"
+        ],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 1,
+          "odd_count": 2,
+          "alphabet_count": 0,
+          "special_count": 0,
+          "sum": "125456788",
+          "concat_length": 0
+        }
+      }
+    ],
+    "data_patterns": [
+      {
+        "test_name": "Only Numbers",
+        "data_length": 10,
+        "status_code": 200,
+        "response_time": 0.005,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 5,
+          "odd_count": 5,
+          "alphabet_count": 0,
+          "special_count": 0,
+          "sum": "55",
+          "concat_length": 0
+        }
+      },
+      {
+        "test_name": "Only Alphabets",
+        "data_length": 6,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 0,
+          "odd_count": 0,
+          "alphabet_count": 6,
+          "special_count": 0,
+          "sum": "0",
+          "concat_length": 6
+        }
+      },
+      {
+        "test_name": "Only Special Characters",
+        "data_length": 6,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 0,
+          "odd_count": 0,
+          "alphabet_count": 0,
+          "special_count": 6,
+          "sum": "0",
+          "concat_length": 0
+        }
+      }
+    ],
+    "mixed_scenarios": [
+      {
+        "test_name": "Balanced Mix",
+        "data_length": 9,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": false,
+        "errors": [
+          "Field 'concat_string': expected $cBa, got CbA"
+        ],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 1,
+          "odd_count": 2,
+          "alphabet_count": 3,
+          "special_count": 3,
+          "sum": "6",
+          "concat_length": 3
+        }
+      },
+      {
+        "test_name": "Negative Numbers",
+        "data_length": 7,
+        "status_code": 200,
+        "response_time": 0.001,
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "response_summary": {
+          "even_count": 2,
+          "odd_count": 2,
+          "alphabet_count": 2,
+          "special_count": 1,
+          "sum": "6",
+          "concat_length": 2
+        }
+      }
+    ]
+  }
+}
