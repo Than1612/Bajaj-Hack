@@ -1,4 +1,4 @@
-# BFHL REST API - VIT Full Stack Question
+# BFHL REST API - Full Stack
 
 This is a REST API built with Python Flask that processes arrays and returns categorized data as per the VIT Full Stack Question requirements.
 
